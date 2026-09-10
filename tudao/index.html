@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兔岛影院-热门影视推荐与在线观影指南</title>
+    <meta name="description" content="兔岛影院为您提供最新热门电影、电视剧、动漫的推荐与观影指南，涵盖动作、科幻、爱情、喜剧等丰富类型，帮助您快速找到心仪的影视内容。">
+    <meta name="keywords" content="兔岛影院,电影推荐,电视剧推荐,动漫推荐,在线观影,影视指南">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f8f4f0;
+            color: #2d2a26;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: #1e1b18;
+            color: #f5efe8;
+            padding: 16px 0;
+            border-bottom: 3px solid #e07a5f;
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 32px;
+            line-height: 1;
+        }
+
+        .logo-text {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: #e07a5f;
+        }
+
+        .main-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .main-nav a {
+            display: block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            background-color: #e07a5f;
+            color: #1e1b18;
+        }
+
+        .header-search {
+            display: flex;
+            align-items: center;
+            background-color: #2d2926;
+            border-radius: 30px;
+            padding: 4px 6px;
+        }
+
+        .header-search input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #f5efe8;
+            padding: 6px 12px;
+            font-size: 14px;
+            width: 160px;
+        }
+
+        .header-search button {
+            background: #e07a5f;
+            border: none;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #1e1b18;
+            line-height: 1;
+        }
+
+        /* Hero Banner */
+        .hero-section {
+            background: linear-gradient(135deg, #2d2926 0%, #4a3f38 100%);
+            color: #f5efe8;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::after {
+            content: "🎬";
+            position: absolute;
+            right: 30px;
+            bottom: -10px;
+            font-size: 160px;
+            opacity: 0.08;
+            transform: rotate(-10deg);
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+            font-weight: 800;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 28px;
+            opacity: 0.88;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            background-color: #e07a5f;
+            color: #1e1b18;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 16px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #e07a5f;
+            color: #f5efe8;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-meta {
+            margin-top: 24px;
+            font-size: 14px;
+            opacity: 0.7;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            padding-left: 16px;
+            border-left: 5px solid #e07a5f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .section-title .more-link {
+            font-size: 14px;
+            font-weight: 400;
+            color: #888;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        .section-title .more-link:hover {
+            color: #e07a5f;
+        }
+
+        /* Movie Grid Cards */
+        .content-section {
+            padding: 20px 0 40px;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .movie-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .movie-poster {
+            background: linear-gradient(145deg, #b8a99a, #8a7a6a);
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            color: rgba(255, 255, 255, 0.85);
+            position: relative;
+        }
+
+        .movie-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #e07a5f;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .movie-info {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-info h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .movie-info .meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .movie-info .desc {
+            font-size: 14px;
+            color: #555;
+            flex: 1;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .movie-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .movie-tags span {
+            background: #f0e9e3;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 12px;
+            color: #4a3f38;
+        }
+
+        /* Featured Films */
+        .featured-section {
+            background: #fff;
+            padding: 50px 0;
+            margin: 20px 0;
+        }
+
+        .featured-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .featured-item {
+            display: flex;
+            gap: 20px;
+            background: #faf7f4;
+            border-radius: 16px;
+            padding: 20px;
+            transition: background 0.2s;
+        }
+
+        .featured-item:hover {
+            background: #f0e9e3;
+        }
+
+        .featured-thumb {
+            width: 80px;
+            height: 110px;
+            border-radius: 8px;
+            background: #d6c7b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            flex-shrink: 0;
+        }
+
+        .featured-info h3 {
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .featured-info p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .rating {
+            color: #d97706;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        /* Types / Categories */
+        .types-section {
+            padding: 40px 0;
+        }
+
+        .type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 16px;
+        }
+
+        .type-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .type-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .type-item .icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .type-item .name {
+            font-weight: 600;
+            font-size: 15px;
+            color: #3a3530;
+        }
+
+        /* Watch Guide */
+        .guide-section {
+            background: #f0e9e3;
+            padding: 50px 0;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .guide-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        .guide-card .step {
+            font-size: 30px;
+            font-weight: 800;
+            color: #e07a5f;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .guide-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .guide-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 50px 0;
+            background: #fff;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-item summary {
+            font-weight: 600;
+            font-size: 17px;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            font-size: 24px;
+            color: #e07a5f;
+            margin-left: 10px;
+        }
+
+        .faq-item[open] summary::after {
+            content: "−";
+        }
+
+        .faq-answer {
+            padding-top: 12px;
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #1e1b18;
+            color: #a89f94;
+            padding: 50px 0 30px;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: #f5efe8;
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .footer-col a:hover {
+            color: #e07a5f;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #3a3530;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-wrap {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .main-nav {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .main-nav ul {
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+            }
+
+            .main-nav a {
+                white-space: nowrap;
+            }
+
+            .header-search {
+                width: 100%;
+            }
+
+            .header-search input {
+                flex: 1;
+                width: auto;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 16px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .featured-list {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 40px 0;
+            }
+
+            .hero-buttons .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .btn-outline {
+                border-width: 1px;
+            }
+
+            .type-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .logo-text {
+                font-size: 22px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-wrap">
+            <div class="logo-area">
+                <span class="logo-icon">🐰</span>
+                <span class="logo-text">兔岛<span>影院</span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">剧集</a></li>
+                    <li><a href="#">动漫</a></li>
+                    <li><a href="#">综艺</a></li>
+                    <li><a href="#">榜单</a></li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <input type="text" placeholder="搜索影视名称...">
+                <button aria-label="搜索">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>在兔岛影院，找到今晚想看的精彩</h1>
+                <p>精选热门影视与口碑佳作，覆盖电影、剧集、动漫与综艺。从经典到新番，兔岛帮你轻松决策，畅享观影时光。</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn">热门推荐</a>
+                    <a href="#" class="btn btn-outline">高分片单</a>
+                </div>
+                <div class="hero-meta">
+                    <span>🔥 本周热门更新</span>
+                    <span>🎥 每日精选片单</span>
+                    <span>⭐ 观众真实评分参考</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="content-section container">
+            <div class="section-title">
+                <h2>🔥 本周热门影视</h2>
+                <a href="#" class="more-link">查看全部 →</a>
+            </div>
+            <div class="movie-grid">
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <span>🎬</span>
+                        <span class="movie-badge">热播</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>星际迷航：新纪元</h3>
+                        <div class="meta">电影 · 科幻 · 2025</div>
+                        <p class="desc">一支探索队意外开启未知星域，面对神秘文明与宇宙危机，展开一场关乎人类命运的冒险。</p>
+                        <div class="movie-tags"><span>科幻</span><span>冒险</span><span>动作</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <span>📺</span>
+                        <span class="movie-badge">口碑</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>风起长安</h3>
+                        <div class="meta">剧集 · 古装 · 2025</div>
+                        <p class="desc">大唐盛世暗流涌动，少年侦探携手伙伴破解连环奇案，揭开尘封多年的宫廷秘密。</p>
+                        <div class="movie-tags"><span>古装</span><span>悬疑</span><span>剧情</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <span>🐉</span>
+                        <span class="movie-badge">新番</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>龙之谷：觉醒</h3>
+                        <div class="meta">动漫 · 奇幻 · 更新至12集</div>
+                        <p class="desc">少年与龙族签订契约，踏上寻找失落神器的旅程。伙伴集结，热血与感动交织。</p>
+                        <div class="movie-tags"><span>奇幻</span><span>冒险</span><span>热血</span></div>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <span>😄</span>
+                        <span class="movie-badge">高分</span>
+                    </div>
+                    <div class="movie-info">
+                        <h3>周末笑翻天</h3>
+                        <div class="meta">综艺 · 真人秀 · 2025</div>
+                        <p class="desc">明星嘉宾团每期挑战趣味任务，爆笑互动不断，轻松解压必备综艺。</p>
+                        <div class="movie-tags"><span>搞笑</span><span>真人秀</span><span>治愈</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>🌟 编辑精选 · 高分佳作</h2>
+                    <a href="#" class="more-link">更多高分片单 →</a>
+                </div>
+                <div class="featured-list">
+                    <div class="featured-item">
+                        <div class="featured-thumb">🎭</div>
+                        <div class="featured-info">
+                            <h3>人生剧场</h3>
+                            <p>剧情 · 家庭</p>
+                            <span class="rating">★ 9.2</span>
+                            <p style="margin-top: 6px;">三代人的情感羁绊，细腻刻画平凡生活里的暖光。</p>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <div class="featured-thumb">🌌</div>
+                        <div class="featured-info">
+                            <h3>暗夜追凶</h3>
+                            <p>悬疑 · 犯罪</p>
+                            <span class="rating">★ 8.8</span>
+                            <p style="margin-top: 6px;">双线叙事，刑警与凶手隔空博弈，反转不断。</p>
+                        </div>
+                    </div>
+                    <div class="featured-item">
+                        <div class="featured-thumb">🌸</div>
+                        <div class="featured-info">
+                            <h3>春日情书</h3>
+                            <p>爱情 · 治愈</p>
+                            <span class="rating">★ 8.6</span>
+                            <p style="margin-top: 6px;">温暖安静的纯爱故事，适合一个人慢慢欣赏。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="types-section container">
+            <div class="section-title">
+                <h2>🎯 按类型逛逛</h2>
+            </div>
+            <div class="type-grid">
+                <div class="type-item"><span class="icon">🎬</span><span class="name">动作</span></div>
+                <div class="type-item"><span class="icon">🤖</span><span class="name">科幻</span></div>
+                <div class="type-item"><span class="icon">😂</span><span class="name">喜剧</span></div>
+                <div class="type-item"><span class="icon">💘</span><span class="name">爱情</span></div>
+                <div class="type-item"><span class="icon">🔪</span><span class="name">悬疑</span></div>
+                <div class="type-item"><span class="icon">👻</span><span class="name">惊悚</span></div>
+                <div class="type-item"><span class="icon">🏯</span><span class="name">古装</span></div>
+                <div class="type-item"><span class="icon">🧠</span><span class="name">剧情</span></div>
+                <div class="type-item"><span class="icon">✈️</span><span class="name">冒险</span></div>
+                <div class="type-item"><span class="icon">👨‍👩‍👧</span><span class="name">家庭</span></div>
+                <div class="type-item"><span class="icon">🎤</span><span class="name">音乐</span></div>
+                <div class="type-item"><span class="icon">📚</span><span class="name">纪录</span></div>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>📖 兔岛观影小贴士</h2>
+                </div>
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <span class="step">01</span>
+                        <h3>如何快速找到想看的内容？</h3>
+                        <p>使用顶部搜索栏输入片名或演员，也可以按类型标签浏览。首页的“热门影视”和“编辑精选”会定期更新，帮助您发现新片好剧。</p>
+                    </div>
+                    <div class="guide-card">
+                        <span class="step">02</span>
+                        <h3>片源质量怎么判断？</h3>
+                        <p>兔岛影院注重观影体验，所有推荐内容均标注清晰度与播放流畅度参考。选择适合您网络环境的清晰度，可获得更顺畅的观看感受。</p>
+                    </div>
+                    <div class="guide-card">
+                        <span class="step">03</span>
+                        <h3>追更提醒怎么设置？</h3>
+                        <p>对于连载中的剧集和动漫，您可以在详情页点击“追剧”按钮，之后每周更新时我们会通过站内消息提醒您，不错过任何一集。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>❓ 常见问题</h2>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>兔岛影院是免费的吗？</summary>
+                        <div class="faq-answer">
+                            兔岛影院提供大量免费观看的影视内容。部分最新院线影片或独家内容可能需要会员或单片付费，具体以页面标注为准。我们始终努力为用户提供高性价比的观影选择。
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>视频无法播放或卡顿怎么办？</summary>
+                        <div class="faq-answer">
+                            首先建议检查网络连接，并尝试切换清晰度。如果仍然无法播放，可以尝试清理浏览器缓存或更换浏览器。若问题依旧，请联系客服并提供具体片名和播放环境，我们会尽快排查解决。
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>支持哪些设备访问？</summary>
+                        <div class="faq-answer">
+                            兔岛影院是响应式网页设计，支持手机、平板、电脑等各类设备通过浏览器直接访问。您也可以将页面添加到主屏幕，获得接近App的使用体验。
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>片源多久更新一次？</summary>
+                        <div class="faq-answer">
+                            热门院线电影下映后约1-3个月陆续上线，剧集和动漫通常会在更新完成后24小时内同步。编辑团队每日都会整理最新片源，确保时效性。
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🐰 兔岛影院</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">加入兔岛</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>观影指南</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">会员说明</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">院线电影</a></li>
+                        <li><a href="#">高分剧集</a></li>
+                        <li><a href="#">动漫番剧</a></li>
+                        <li><a href="#">热门综艺</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情提示</h4>
+                    <ul>
+                        <li>请合理安排观影时间</li>
+                        <li>保护视力，注意休息</li>
+                        <li>未成年人请在家长指导下浏览</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 兔岛影院 版权所有 · 让好影视陪伴每一天</p>
+            </div>
+        </div>
+    </footer>
+</body>
+  </html>
