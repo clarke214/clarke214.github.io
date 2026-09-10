@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汗臭治疗-有效缓解腋下异味与多汗的实用指南</title>
+    <meta name="description" content="汗臭治疗全面指南，了解汗臭产生原因、日常护理方法、止汗产品选择、专业治疗手段及常见误区，帮助您摆脱异味困扰，重拾自信。">
+    <meta name="keywords" content="汗臭治疗,腋下异味,多汗症,止汗露,狐臭,汗臭原因,汗臭怎么办">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f4f7f6;
+            color: #1a2e35;
+            line-height: 1.6;
+            background-image: linear-gradient(145deg, #f0faf8 0%, #e7f0ed 100%);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 15px rgba(0, 40, 40, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #00897b, #00b894);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 140, 120, 0.2);
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #005b4f;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #2a4a44;
+            font-weight: 500;
+            font-size: 1rem;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        nav a:hover {
+            color: #00897b;
+            border-bottom-color: #00897b;
+        }
+        .hero {
+            background: linear-gradient(135deg, #d9f3ef 0%, #c6ece6 50%, #b7e3dd 100%);
+            padding: 70px 0 60px;
+            margin-bottom: 40px;
+            border-radius: 0 0 40px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            color: #003d33;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #20665c;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 137, 123, 0.25);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #003d33;
+            margin: 50px 0 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #00897b, #00b894);
+            border-radius: 4px;
+        }
+        .intro-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 50, 50, 0.08);
+            margin: 30px 0;
+            border-left: 6px solid #00897b;
+        }
+        .intro-card h2 {
+            color: #00897b;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+        .intro-card p {
+            font-size: 1.1rem;
+            color: #3a5a55;
+            margin-bottom: 12px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 50, 50, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid transparent;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 130, 110, 0.12);
+            border-top-color: #00897b;
+        }
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: #e0f5f1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 2rem;
+        }
+        .feature-card h3 {
+            color: #003d33;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .feature-card p {
+            color: #4a6a65;
+            font-size: 0.95rem;
+        }
+        .methods-section {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 8px 30px rgba(0, 50, 50, 0.08);
+        }
+        .method-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #e8f2f0;
+        }
+        .method-item:last-child {
+            border-bottom: none;
+        }
+        .method-num {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00897b, #00b894);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .method-content h3 {
+            color: #003d33;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        .method-content p {
+            color: #3a5a55;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .product-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 50, 50, 0.07);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            box-shadow: 0 12px 30px rgba(0, 130, 110, 0.15);
+            transform: translateY(-4px);
+        }
+        .product-img {
+            height: 160px;
+            background: linear-gradient(135deg, #c8e8e0, #b0ddd2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: #007a6b;
+        }
+        .product-info {
+            padding: 20px;
+            flex: 1;
+        }
+        .product-info h3 {
+            color: #003d33;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .product-info p {
+            color: #4a6a65;
+            font-size: 0.9rem;
+        }
+        .product-badge {
+            display: inline-block;
+            background: #e0f5f1;
+            color: #00897b;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        .faq-section {
+            background: #e8f5f2;
+            border-radius: 24px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 14px;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0, 60, 50, 0.05);
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #003d33;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-question::before {
+            content: "Q";
+            background: #00897b;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .faq-answer {
+            color: #3a5a55;
+            padding-left: 38px;
+            font-size: 0.95rem;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .tips-list li {
+            background: white;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 50, 50, 0.05);
+            font-size: 0.95rem;
+            color: #2a4a44;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            border-left: 4px solid #00b894;
+        }
+        .tips-list li span {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .consult-box {
+            background: linear-gradient(135deg, #003d33, #005b4f);
+            border-radius: 24px;
+            padding: 40px;
+            color: white;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .consult-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .consult-box p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        .consult-btn {
+            background: white;
+            color: #003d33;
+            border: none;
+            padding: 12px 36px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .consult-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        footer {
+            background: #003d33;
+            color: #a8c8c2;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1.05rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 0;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .methods-section, .intro-card, .faq-section {
+                padding: 25px;
+            }
+            .method-item {
+                flex-direction: column;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .consult-box h3 {
+                font-size: 1.4rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding: 40px 0 40px;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .container {
+                padding: 0 15px;
+            }
+            .logo-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">清</div>
+                <span class="logo-text">汗清指南</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#why">原因解析</a></li>
+                    <li><a href="#methods">治疗方法</a></li>
+                    <li><a href="#products">产品选择</a></li>
+                    <li><a href="#tips">日常建议</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>汗臭治疗</h1>
+                <p>科学认识汗臭成因，系统掌握改善方法，从日常护理到专业治疗，全面帮助您告别异味困扰。</p>
+                <span class="hero-tag">科学·安全·有效</span>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="why">
+                <h2 class="section-title">汗臭产生的根本原因</h2>
+                <div class="intro-card">
+                    <h2>汗液本身无味，异味来自细菌分解</h2>
+                    <p>人体的汗腺主要分为小汗腺和大汗腺。小汗腺遍布全身，分泌的汗液约99%是水分，通常没有明显气味。而大汗腺（顶泌汗腺）主要分布在腋下、腹股沟等部位，其分泌物含有蛋白质、脂质等物质。</p>
+                    <p>当大汗腺分泌的汗液到达皮肤表面，被细菌分解后，就会产生具有特征性气味的物质，这就是汗臭（俗称狐臭）的主要来源。此外，饮食、情绪、荷尔蒙变化也会影响汗液成分和气味强度。</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🦠</div>
+                        <h3>细菌分解</h3>
+                        <p>腋下温暖潮湿，是细菌繁殖的理想环境。细菌将汗液中的有机物分解，产生不饱和脂肪酸和氨等有气味物质。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧬</div>
+                        <h3>遗传因素</h3>
+                        <p>大汗腺的分泌活跃程度与遗传有明显关联。如果家族中有人存在明显的汗臭问题，个人出现的概率也会相对较高。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🍽️</div>
+                        <h3>饮食习惯</h3>
+                        <p>辛辣食物、大蒜、洋葱、咖啡因和酒精等可能通过血液循环影响汗液成分，使气味变得更强烈。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚖️</div>
+                        <h3>激素波动</h3>
+                        <p>青春期、孕期或更年期等荷尔蒙变化阶段，大汗腺活跃度可能提升，导致出汗量和气味变化。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="methods">
+                <h2 class="section-title">汗臭治疗的系统方法</h2>
+                <div class="methods-section">
+                    <div class="method-item">
+                        <div class="method-num">1</div>
+                        <div class="method-content">
+                            <h3>基础日常护理</h3>
+                            <p>每天至少清洗腋下一次，使用抗菌型沐浴产品。运动后及时淋浴，保持腋下干燥。定期刮除腋毛可以减少细菌附着的表面积，降低异味产生的机会。穿着透气性好的纯棉或速干材质衣物，避免紧身不透气的合成纤维服装。</p>
+                        </div>
+                    </div>
+                    <div class="method-item">
+                        <div class="method-num">2</div>
+                        <div class="method-content">
+                            <h3>外用止汗产品</h3>
+                            <p>市面上的止汗露（含铝盐成分）通过暂时性阻塞汗腺导管来减少汗液分泌，从而间接减少异味。除臭剂则主要通过抗菌成分抑制细菌生长。对于轻中度汗臭，选择正规品牌的止汗走珠、喷雾或膏体是有效的起点。建议在晚间清洁后、皮肤干爽时涂抹，效果更佳。</p>
+                        </div>
+                    </div>
+                    <div class="method-item">
+                        <div class="method-num">3</div>
+                        <div class="method-content">
+                            <h3>口服及外用处方药</h3>
+                            <p>对于外用产品效果不理想的情况，皮肤科医生可能会开具含氯化铝的强效止汗剂，或外用抗生素软膏来控制细菌。部分情况下，医生会根据患者的具体状况评估是否适合使用口服抗胆碱能药物来减少全身出汗，但需注意可能伴随的口干、视力模糊等副作用，须在医生指导下使用。</p>
+                        </div>
+                    </div>
+                    <div class="method-item">
+                        <div class="method-num">4</div>
+                        <div class="method-content">
+                            <h3>医疗美容治疗</h3>
+                            <p>近年来，肉毒素注射（通常用于腋下多汗）被证明能有效阻断神经对汗腺的信号传递，减少出汗量达数月之久。此外，微波热能治疗（如Miradry）和激光治疗通过热能破坏汗腺，提供更长期的改善效果。这些治疗均需在正规医疗机构由专业医生操作。</p>
+                        </div>
+                    </div>
+                    <div class="method-item">
+                        <div class="method-num">5</div>
+                        <div class="method-content">
+                            <h3>手术干预</h3>
+                            <p>对于重度汗臭且上述方法均无效的情况，外科手术（如大汗腺切除术或微创刮吸术）是最后的考虑选项。手术可以直接去除产生异味的大汗腺。但任何手术都存在创伤、感染、疤痕等风险，决策前务必与专业医师进行详细沟通，权衡利弊。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="products">
+                <h2 class="section-title">常见止汗除臭产品类型</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img">🧴</div>
+                        <div class="product-info">
+                            <h3>走珠式止汗露</h3>
+                            <p>使用方便，接触面大，液体附着均匀。适合日常使用，建议选择无酒精配方以减少刺激。</p>
+                            <span class="product-badge">适合日常</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">🌬️</div>
+                        <div class="product-info">
+                            <h3>喷雾式除臭剂</h3>
+                            <p>清爽不粘腻，喷洒面积广，适合运动后快速使用。注意需保持一定距离喷射，避免吸入。</p>
+                            <span class="product-badge">清爽型</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">🍃</div>
+                        <div class="product-info">
+                            <h3>天然成分除臭膏</h3>
+                            <p>采用小苏打、植物精油等成分，不含铝盐。适合皮肤敏感或追求天然配方的人群，但止汗效果可能较弱。</p>
+                            <span class="product-badge">温和配方</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tips">
+                <h2 class="section-title">日常生活中的辅助建议</h2>
+                <ul class="tips-list">
+                    <li><span>👕</span>选择宽松、透气的天然纤维衣物，并做到每日更换。衣物上的残留汗渍和细菌会加重气味。</li>
+                    <li><span>🚿</span>坚持每天淋浴，尤其在运动或大量出汗后。可使用含有过氧化苯甲酰或氯己定的抗菌沐浴产品。</li>
+                    <li><span>🌶️</span>适当减少辛辣、刺激性食物以及咖啡因和酒精的摄入，观察个人体味是否有改善。</li>
+                    <li><span>🧘</span>学会压力管理。情绪紧张会刺激汗腺分泌，尝试冥想、深呼吸或规律运动来放松身心。</li>
+                    <li><span>🧦</span>保持足部清洁干燥，穿着吸汗的棉袜并每日更换，预防脚部异味。</li>
+                    <li><span>🩺</span>如果汗臭突然加重或伴随其他症状，建议就医检查，排除内分泌或代谢方面的问题。</li>
+                </ul>
+            </section>
+
+            <section id="faq">
+                <h2 class="section-title">关于汗臭治疗的常见疑问</h2>
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <div class="faq-question">汗臭和狐臭是一回事吗？</div>
+                        <div class="faq-answer">通常所说的“狐臭”在医学上称为腋臭，是汗臭的一种典型且较明显的表现。汗臭是一个更宽泛的概念，可能由多种原因引起，但绝大多数恼人的汗臭都集中在腋下，与大汗腺分泌有关，因此两者在日常语境中经常混用。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">止汗露真的可以治疗汗臭吗？</div>
+                        <div class="faq-answer">止汗露的主要作用是减少汗液分泌，从而减少细菌分解的底物，间接减轻异味。它属于有效的控制手段，而非“根治”性治疗。对于轻中度情况，规律使用可以显著改善生活质量。如果停用，效果会逐渐消失。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">使用止汗产品会导致乳腺疾病或阿尔茨海默病吗？</div>
+                        <div class="faq-answer">目前没有权威的大规模科学研究证实正常使用合格止汗产品会增加这些疾病的风险。相关担忧主要源于网络传言。如果仍有顾虑，可以选择不含铝盐的除臭产品，或在皮肤破损时避免使用。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">肉毒素治疗汗臭效果能维持多久？</div>
+                        <div class="faq-answer">肉毒素注射治疗腋下多汗的效果通常可以维持6个月到12个月不等，具体因人而异。当效果逐渐消退后，可以再次注射。这是一种安全且创伤小的门诊治疗方式，但费用相对较高。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">儿童或青少年出现汗臭该如何处理？</div>
+                        <div class="faq-answer">青春期开始，大汗腺活跃，出现体味是正常生理现象。首先应从个人卫生入手，教育孩子每天清洗腋下。选择温和的儿童专用除臭产品。如果问题严重影响社交，建议咨询儿科或皮肤科医生，获取更专业的指导。</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="consult-box">
+                <h3>寻求专业医疗帮助</h3>
+                <p>如果汗臭问题严重影响了您的社交、工作或心理健康，请不要独自承受。正规医院的皮肤科医生能够提供准确诊断和个性化的治疗方案。</p>
+                <a href="#" class="consult-btn">了解咨询渠道</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>汗清指南</h4>
+                    <ul>
+                        <li>专注于提供科学、客观的汗臭改善信息</li>
+                        <li>倡导健康生活方式与理性治疗观念</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#why" style="color:#a8c8c2; text-decoration:none;">原因解析</a></li>
+                        <li><a href="#methods" style="color:#a8c8c2; text-decoration:none;">治疗方法</a></li>
+                        <li><a href="#products" style="color:#a8c8c2; text-decoration:none;">产品选择</a></li>
+                        <li><a href="#faq" style="color:#a8c8c2; text-decoration:none;">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>重要提示</h4>
+                    <ul>
+                        <li>网站内容仅供科普参考</li>
+                        <li>不构成医疗诊断或治疗建议</li>
+                        <li>如有疑问请咨询专业医生</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 汗清指南 汗臭治疗专题页 | 本页面信息仅供参考，不替代专业医疗意见</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
